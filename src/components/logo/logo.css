@@ -1,0 +1,11 @@
+/* ===== Logo Design Start ===== */
+.logo_text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  font-family: var(--roboto);
+}
+.unique_text {
+  color: var(--primary);
+}
+/* ===== Logo Design Start ===== */

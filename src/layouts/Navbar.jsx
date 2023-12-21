@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../components/logo/Logo";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -9,9 +10,7 @@ const Navbar = () => {
         <div className="nav_wrapper">
           <div className="logo">
             <Link to="/">
-              <h3 className="logo_text">
-                Student <span className="unique_text">Portal</span>
-              </h3>
+              <Logo logoColor="#222" />
             </Link>
           </div>
           <div className="menu">

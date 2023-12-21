@@ -1,0 +1,58 @@
+/* ===== Footer Design Start ===== */
+.footer {
+  padding: 98px 0;
+  background-color: #222;
+}
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer_links h5 {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  font-family: var(--roboto);
+  padding-bottom: 14px;
+}
+.footer_links ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.footer_links li a {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: var(--robotoMono);
+  transition: color linear 0.3s;
+}
+.footer_links li a:hover {
+  color: var(--primary);
+}
+.footer_btn {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.social_icon {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  color: var(--white);
+  height: 26px;
+  width: 26px;
+  transition: color linear 0.3s;
+}
+.icon:hover {
+  color: var(--primary);
+}
+/* ===== Footer Design End ===== */
