@@ -7,15 +7,30 @@
   align-items: center;
   justify-content: space-between;
 }
+.logo_text {
+  color: var(--textColor);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 150%;
+  font-family: var(--roboto);
+}
+.unique_text {
+  color: var(--primary);
+}
 .menu ul {
   display: flex;
   align-items: center;
   column-gap: 25px;
 }
 .nav_links {
-  color: #322;
+  color: #222;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 120%;
+  font-family: var(--roboto);
+  transition: all linear 0.3s;
+}
+.nav_links:hover {
+  color: var(--secondary);
 }
 /* ==== Navbar Design End ==== */
