@@ -1,11 +1,11 @@
 import { initializeApp } from "firebase/app";
 const firebaseConfig = {
-  apiKey: "AIzaSyDPRk-lwqqycRznn6ij5_e4UybnjIHzgvY",
-  authDomain: "studentportal-1fe3d.firebaseapp.com",
-  projectId: "studentportal-1fe3d",
-  storageBucket: "studentportal-1fe3d.appspot.com",
-  messagingSenderId: "803103588942",
-  appId: "1:803103588942:web:6943433fc46ccf196f391f",
+  apiKey: "AIzaSyBtZS0qZGa4zTvBpoSP2axveSO0a1viJgE",
+  authDomain: "studentportal-cfe93.firebaseapp.com",
+  projectId: "studentportal-cfe93",
+  storageBucket: "studentportal-cfe93.appspot.com",
+  messagingSenderId: "118801333029",
+  appId: "1:118801333029:web:256fd409a9c5d4d94578cc",
 };
 
 const app = initializeApp(firebaseConfig);
