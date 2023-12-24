@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getDatabase, ref, onValue } from "firebase/database";
+import "./allstudents.css";
+import CommonBtn from "../../components/commonBtn/CommonBtn";
 
 const AllStudents = () => {
   const [student, setStudent] = useState([]);
@@ -24,22 +26,20 @@ const AllStudents = () => {
             const { bangla, english, math, physics, chemistry, biology } =
               item.marks;
             return (
-              <div key={index}>
-                <div>
-                  <h4>SID: {studentId}</h4>
-                  <h2>Student Name: {studentName}</h2>
-                  <p>Class: {item.class}</p>
-                  <p>Section: {section}</p>
-                </div>
-                <ul>
-                  <li>Bangla:{bangla}</li>
-                  <li>English:{english}</li>
-                  <li>Mathematics:{math}</li>
-                  <li>Physics:{physics}</li>
-                  <li>Chemistry:{chemistry}</li>
-                  <li>Biology:{biology}</li>
-                </ul>
-                <button>See More</button>
+              <div key={index} className="student_details">
+                <h3>
+                  <span className="sInfo">SID:</span> {studentId}
+                </h3>
+                <h3>
+                  <span className="sInfo">Student Name:</span> {studentName}
+                </h3>
+                <p>
+                  <span className="sInfo">Class:</span> {item.class}
+                </p>
+                <p className="section_info">
+                  <span className="sInfo">Section:</span> {section}
+                </p>
+                <CommonBtn title="See More" />
               </div>
             );
           })}

@@ -1,0 +1,31 @@
+/* ==== All Students Deisgn Start ==== */
+.all_students {
+  padding: 58px 0;
+}
+.allStudent_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.student_details {
+  padding: 25px;
+  border-radius: 4px;
+  background-color: rgba(251, 175, 35, 0.5);
+}
+.sInfo {
+  font-family: var(--roboto);
+}
+.student_details,
+h3,
+p {
+  color: var(--textColor);
+  line-height: 150%;
+  font-family: var(--robotoMono);
+  padding-bottom: 8px;
+}
+.section_info {
+  padding-bottom: 10px;
+}
+/* ==== All Students Deisgn End ==== */
