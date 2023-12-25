@@ -5,6 +5,8 @@ button {
   outline: none;
   transition: all linear 0.3s;
   background-color: var(--white);
+}
+button a {
   color: var(--textColor);
   font-family: var(--roboto);
   font-size: 18px;

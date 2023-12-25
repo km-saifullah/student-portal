@@ -1,0 +1,88 @@
+/* ===== Student Design Start ===== */
+.student_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--textColor);
+  padding: 50px;
+  border-radius: 8px;
+  transition: all linear 0.3s;
+}
+.info_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 8px;
+}
+.close_icon {
+  display: flex;
+  justify-content: right;
+}
+.close_btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgba(235, 101, 64, 0.6);
+  font-size: 26px;
+  display: block;
+  transition: all linear 0.3s;
+}
+.close_btn:hover {
+  cursor: pointer;
+  color: #eb6440;
+}
+.name_marks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text {
+  font-weight: 600;
+  color: var(--primary);
+}
+.student_id,
+.student_name,
+.marks {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: var(--roboto);
+}
+.marks {
+  font-weight: 700;
+  text-align: right;
+}
+.sClass_sSection {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--robotoMono);
+}
+.student_marks {
+  height: 350px;
+  width: 1100px;
+}
+.buttons {
+}
+.update_btn,
+.delete_btn {
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  background-color: #8adab2;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  cursor: pointer;
+}
+.delete_btn {
+  margin-left: 10px;
+  background-color: #bf3131;
+  color: var(--white);
+}
+/* ===== Student Design End ===== */

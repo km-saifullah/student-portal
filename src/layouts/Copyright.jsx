@@ -6,7 +6,9 @@ const Copyright = () => {
     <section className="copyright">
       <div className="container">
         <div className="copyright_wrapper">
-          <p>© All Right Reserved By Khaled Md Saifullah</p>
+          <p className="copyright_text">
+            © All Right Reserved By Khaled Md Saifullah
+          </p>
         </div>
       </div>
     </section>

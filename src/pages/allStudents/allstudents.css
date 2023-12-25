@@ -2,28 +2,40 @@
 .all_students {
   padding: 58px 0;
 }
+.students_heading {
+  text-align: center;
+  color: var(--textColor);
+  font-size: 35;
+  font-weight: 700;
+  line-height: 150%;
+  font-family: var(--roboto);
+  padding-bottom: 35px;
+}
 .allStudent_wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 30px;
+  column-gap: 85px;
+  position: relative;
 }
 .student_details {
+  width: 370px;
   padding: 25px;
   border-radius: 4px;
-  background-color: rgba(251, 175, 35, 0.5);
+  background-color: rgba(251, 175, 35, 0.45);
 }
 .sInfo {
   font-family: var(--roboto);
 }
 .student_details,
-h3,
+h4,
 p {
   color: var(--textColor);
   line-height: 150%;
   font-family: var(--robotoMono);
   padding-bottom: 8px;
+  font-size: 16px;
 }
 .section_info {
   padding-bottom: 10px;

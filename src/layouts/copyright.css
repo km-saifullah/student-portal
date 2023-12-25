@@ -7,10 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
   font-size: 18px;
   font-weight: 500;
   line-height: 150%;
   font-family: var(--robotoMono);
+}
+.copyright_text {
+  color: var(--white);
 }
 /* ===== Copyright Design End ===== */

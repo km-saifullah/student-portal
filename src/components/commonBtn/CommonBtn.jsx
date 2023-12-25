@@ -1,7 +1,7 @@
 import React from "react";
 import "./commonBtn.css";
 
-const CommonBtn = ({ title }) => {
+const CommonBtn = (title) => {
   return <button>{title}</button>;
 };
 

@@ -39,4 +39,21 @@ p {
 .active {
   color: var(--secondary);
 }
+.commonBtn {
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  outline: none;
+  transition: all linear 0.3s;
+  background-color: var(--white);
+  color: var(--textColor);
+  font-family: var(--roboto);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  border-radius: 8px;
+}
+.commonBtn:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+}
 /* ===== Common Design End ===== */
