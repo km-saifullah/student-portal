@@ -12,7 +12,7 @@ import {
 import { ImCancelCircle } from "react-icons/im";
 import "./student.css";
 
-const Student = ({ student, toggle }) => {
+const Student = ({ student, toggle, style }) => {
   const { studentName, studentId, section } = student;
   const { bangla, english, math, physics, chemistry, biology } = student.marks;
   const [totalNumber, setTotalNumber] = useState();
@@ -72,7 +72,7 @@ const Student = ({ student, toggle }) => {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               width={500}
-              height={300}
+              height={250}
               data={data}
               margin={{
                 top: 20,
@@ -81,17 +81,47 @@ const Student = ({ student, toggle }) => {
                 bottom: 5,
               }}
             >
-              <CartesianGrid strokeDasharray="3 3" />
+              <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
               <XAxis name="name" />
-              <Bar dataKey="Bangla" fill="#8D72E1" type="monotone" />
-              <Bar dataKey="English" fill="#62B6B7" type="monotone" />
-              <Bar dataKey="Mathematics" fill="#00A9FF" type="monotone" />
-              <Bar dataKey="Physics" fill="#FF6969" type="monotone" />
-              <Bar dataKey="Chemistry" fill="#16697A" type="monotone" />
-              <Bar dataKey="Biology" fill="#FF9B9B" type="monotone" />
-              <YAxis />
               <Tooltip />
               <Legend />
+              <Bar
+                barSize={50}
+                dataKey="Bangla"
+                fill="#8D72E1"
+                type="monotone"
+              />
+              <Bar
+                barSize={50}
+                dataKey="English"
+                fill="#62B6B7"
+                type="monotone"
+              />
+              <Bar
+                barSize={50}
+                dataKey="Mathematics"
+                fill="#00A9FF"
+                type="monotone"
+              />
+              <Bar
+                barSize={50}
+                dataKey="Physics"
+                fill="#FF6969"
+                type="monotone"
+              />
+              <Bar
+                barSize={50}
+                dataKey="Chemistry"
+                fill="#16697A"
+                type="monotone"
+              />
+              <Bar
+                barSize={50}
+                dataKey="Biology"
+                fill="#FF9B9B"
+                type="monotone"
+              />
+              <YAxis />
             </BarChart>
           </ResponsiveContainer>
           <div className="buttons">
