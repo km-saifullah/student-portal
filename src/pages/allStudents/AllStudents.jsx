@@ -63,7 +63,12 @@ const AllStudents = () => {
             );
           })}
           {modal && (
-            <Student student={singleStudent} modal={modal} toggle={toggle} />
+            <Student
+              student={singleStudent}
+              modal={modal}
+              setModal={setModal}
+              toggle={toggle}
+            />
           )}
         </div>
       </div>

@@ -6,8 +6,10 @@
   transform: translate(-50%, -50%);
   background-color: var(--textColor);
   padding: 50px;
-  border-radius: 8px;
   transition: all linear 0.3s;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to left, #3ba3fb, #fbae23) 1;
 }
 .info_wrapper {
   display: flex;

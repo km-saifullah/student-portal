@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getDatabase, ref, remove, update, set } from "firebase/database";
 import {
   BarChart,
   CartesianGrid,
@@ -10,12 +11,15 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { ImCancelCircle } from "react-icons/im";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./student.css";
 
-const Student = ({ student, toggle, style }) => {
-  const { studentName, studentId, section } = student;
+const Student = ({ student, toggle, setModal, modal }) => {
+  const { studentName, studentId, section, id } = student;
   const { bangla, english, math, physics, chemistry, biology } = student.marks;
-  const [totalNumber, setTotalNumber] = useState();
+
+  const db = getDatabase();
 
   // chart data
   const data = [
@@ -37,9 +41,27 @@ const Student = ({ student, toggle, style }) => {
     });
   };
   totalMarks();
+
+  // delete student
+  const handleDelete = () => {
+    remove(ref(db, "students/" + id)).then(() => {
+      toast(`${studentName} has deleted from the portal ❌`, {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      // setModal(false);
+    });
+  };
   return (
     <section className="student_info">
       <div className="info_wrapper">
+        <ToastContainer />
         <div className="close_icon">
           <div>
             <button className="close_btn" onClick={toggle}>
@@ -126,7 +148,9 @@ const Student = ({ student, toggle, style }) => {
           </ResponsiveContainer>
           <div className="buttons">
             <button className="update_btn">Update</button>
-            <button className="delete_btn">Delete</button>
+            <button className="delete_btn" onClick={handleDelete}>
+              Delete
+            </button>
           </div>
         </div>
       </div>
