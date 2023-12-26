@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
-import { Link, useNavigate } from "react-router-dom";
+import { getDatabase, ref, onValue, remove } from "firebase/database";
 import Student from "../student/Student";
 import "./allstudents.css";
 
@@ -8,6 +7,7 @@ const AllStudents = () => {
   const [student, setStudent] = useState([]);
   const [singleStudent, setSingleStudent] = useState();
   const [modal, setModal] = useState(false);
+  const [studentLength, setStudentLength] = useState(false);
 
   // toggle button for modal
   const toggle = () => setModal(!modal);
@@ -32,10 +32,28 @@ const AllStudents = () => {
     setModal(true);
   };
 
+  const handleDeleteAllStudent = () => {
+    remove(ref(db, "students/")).then(() => {
+      console.log("All Students Deleted");
+      if (student.length > 0) {
+        setStudentLength(true);
+      } else {
+        setStudentLength(false);
+      }
+    });
+  };
+
   return (
     <section className="all_students">
       <div className="container">
         <h2 className="students_heading">All Students</h2>
+        <div className="delete_all">
+          {studentLength ? null : (
+            <button className="deleteall_btn" onClick={handleDeleteAllStudent}>
+              Delete All Students
+            </button>
+          )}
+        </div>
         <div className="allStudent_wrapper">
           {student.map((item, index) => {
             const { studentId, studentName, section, id } = item;
