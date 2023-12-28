@@ -6,11 +6,16 @@
 
 1. Step-1:
    Clone the repository
-2. Step-2: Install All Packages
+2. Step-2:
+   Navigate to the student-portal directory
+   ```
+   cd student-portal
+   ```
+3. Step-2: Install All Packages
    ```
    npm install
    ```
-3. Step-3: Run the Server
+4. Step-3: Run the Server
    ```
    npm run dev
    ```
@@ -25,4 +30,4 @@
 
 ### Live Site Link
 
-[Netlify Link](https://github.com/km-saifullah/student-portal)
+[Netlify Link](https://app-sportal.netlify.app/)
