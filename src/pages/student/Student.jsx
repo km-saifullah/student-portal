@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { getDatabase, ref, remove, update, set } from "firebase/database";
+import { useNavigate } from "react-router-dom";
+import { getDatabase, ref, remove, update } from "firebase/database";
 import {
   BarChart,
   CartesianGrid,
@@ -11,15 +12,22 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { ImCancelCircle } from "react-icons/im";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UpdateStudent from "../updateStudent/UpdateStudent";
 import "./student.css";
 
-const Student = ({ student, toggle, setModal, modal }) => {
+const Student = ({ student, toggle, setModal }) => {
+  const [updateStatus, setUpdateStatus] = useState(false);
+  const [active, setActive] = useState("");
   const { studentName, studentId, section, id } = student;
   const { bangla, english, math, physics, chemistry, biology } = student.marks;
 
+  const navigate = useNavigate();
+
   const db = getDatabase();
+
+  const updateState = () => setUpdateStatus(!updateStatus);
 
   // chart data
   const data = [
@@ -55,13 +63,22 @@ const Student = ({ student, toggle, setModal, modal }) => {
         progress: undefined,
         theme: "light",
       });
-      // setModal(false);
     });
+    setModal(false);
+  };
+
+  // handle update student
+  const handleUpdate = () => {
+    setModal(false);
+    navigate("/update-student");
+    setActive("active-1");
+    console.log("Active:", active);
+    setUpdateStatus(true);
+    console.log(updateStatus);
   };
   return (
     <section className="student_info">
       <div className="info_wrapper">
-        <ToastContainer />
         <div className="close_icon">
           <div>
             <button className="close_btn" onClick={toggle}>
@@ -147,12 +164,25 @@ const Student = ({ student, toggle, setModal, modal }) => {
             </BarChart>
           </ResponsiveContainer>
           <div className="buttons">
-            <button className="update_btn">Update</button>
+            <button
+              className="update_btn"
+              onClick={() => handleUpdate(student)}
+            >
+              Update
+            </button>
             <button className="delete_btn" onClick={handleDelete}>
               Delete
             </button>
           </div>
         </div>
+        {updateStatus && (
+          <UpdateStudent
+            student={student}
+            updateStatus={updateStatus}
+            setUpdateStatus={setUpdateStatus}
+            updateState={updateState}
+          />
+        )}
       </div>
     </section>
   );

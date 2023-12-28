@@ -5,7 +5,7 @@
 .students_heading {
   text-align: center;
   color: var(--textColor);
-  font-size: 35;
+  font-size: 35px;
   font-weight: 700;
   line-height: 150%;
   font-family: var(--roboto);
@@ -13,7 +13,7 @@
 }
 .delete_all {
   display: flex;
-  justify-content: end;
+  justify-content: right;
   padding: 10px 0;
 }
 .deleteall_btn {
@@ -25,7 +25,7 @@
   font-weight: 400;
   line-height: 120%;
   cursor: pointer;
-  background-color: rgba(191, 49, 49, 0.615);
+  background-color: rgba(191, 49, 49, 0.8);
   color: var(--white);
   transition: all linear 0.3s;
 }

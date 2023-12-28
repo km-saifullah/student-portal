@@ -11,6 +11,7 @@ import MainLayout from "./layouts/MainLayout";
 import AddStudent from "./pages/addStudent/AddStudent";
 import Contact from "./pages/contact/Contact";
 import Student from "./pages/student/Student";
+import UpdateStudent from "./pages/updateStudent/UpdateStudent";
 
 // all routes
 const router = createBrowserRouter(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path="/addstudent" element={<AddStudent />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/student" element={<Student />} />
+      <Route path="/update-student" element={<UpdateStudent />} />
     </Route>
   )
 );
